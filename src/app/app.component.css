@@ -1,0 +1,17 @@
+body{
+    font-weight: bolder;
+    height: 100vh ;
+}
+.colr {
+color:#CED0CE;
+}
+.list-group-item{
+    border:none;
+}
+.banner{
+    
+
+    background-size:cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+}

@@ -1,0 +1,17 @@
+.over{
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('http://assets1.ignimgs.com/2017/06/28/top100-gotcharacters-desktop-1498688689918.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+     height:auto;
+}
+.heightof{
+    height:100vh;
+}
+.box{
+    border:1px solid lightgrey;
+    width:300px;
+    height:auto;
+    
+}

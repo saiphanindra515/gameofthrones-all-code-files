@@ -1,0 +1,116 @@
+
+<section>
+  <div class="container-fluid">
+    <div class="row height">
+      <div class="col">
+        <div class="banner">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-8 col-12">
+                <h1 class=" display-4 text-light text-uppercase" style="margin-top:10vh;font-family: Trajan Pro"> Game of Thrones</h1>
+                 <h4 class="text-light text-capitalize"style="font-family:Trajan Pro">This site consists of data related to popular tv series game of thrones.
+                   you can find data, related to books of got,characters and houses here.
+                 </h4>
+                  <a class="btn btn-outline-danger m-5 py-2 px-4" style="letter-spacing: 5px; " href="http://www.hotstar.com/tv/game-of-thrones/8184">watch now</a> 
+              </div>
+              <div class="col-md-4 col-12">
+                <img class="img img-fluid map" style="margin-top:10vh" width="400" src="https://images-na.ssl-images-amazon.com/images/I/51zhZLrVngL._SX425_.jpg">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ </section> 
+
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <h4 class=" mt-5 mx-5"> About</h4>
+        <p class="mx-5">Game of Thrones is an American fantasy drama television series created
+           by David Benioff and D. B. Weiss. It is an adaptation of A Song of Ice and Fire, 
+           George R. R. Martin's series of fantasy novels, the first of which is A Game of Thrones.
+            It is filmed in Belfast and elsewhere in the United Kingdom, Canada, Croatia, Iceland, Malta,
+             Morocco, Spain, and the United States. The series premiered on HBO in the United States on April 17, 2011,
+           and its seventh season ended on August 27, 2017. 
+          The series will conclude with its eighth season premiering in 2019.
+          Set on the fictional continents of Westeros and Essos,
+           Game of Thrones has several plot lines and a large ensemble 
+           cast but centers on three primary story arcs. The first story arc 
+           centers on the Iron Throne of the Seven Kingdoms and follows a web of alliances and
+            conflicts among the dynastic noble families either vying to claim the throne or fighting 
+            for independence from the throne. The second story arc focuses on the last descendant of the
+             realm's deposed ruling dynasty, exiled and plotting a return to the throne. The third story arc 
+             centers on the longstanding brotherhood charged with defending the realm against the ancient 
+             threats of the fierce peoples and legendary creatures that lie far north,
+           and an impending winter that threatens the realm.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-10">
+          <h4 class=" mt-5 mx-5"> broadcast</h4>
+          <p class="mx-5">
+              Game of Thrones is broadcast by HBO in the United States 
+              and by its local subsidiaries or other pay television services in other countries,
+               at the same time as in the U.S. or weeks (or months) later. The series' broadcast 
+               in China on CCTV, begun in 2014, was heavily edited to remove scenes of sex and violence
+                in accordance with a Chinese practice of censoring Western TV series to prevent what the
+                 People's Daily calls "negative effects and hidden security dangers". This resulted in 
+                 viewer complaints about the incoherence of what remained.[146] Broadcasters carrying Game of Thrones
+                  include Showcase in Australia; HBO Canada, Super Écran and Showcase in Canada; HBO Latin America in Latin
+                   America; SoHo and Prime in New Zealand,
+               and Sky Atlantic in the United Kingdom and Ireland.
+          </p>
+             
+          
+        </div>
+        <div class="col-md-6 col-12 mt-5">
+            <img class="img img-fluid ml-5" src="https://yt3.ggpht.com/a-/ACSszfHOzJ1Ly4uEfi-hwGoYnCXdCUOuRIlBakQe1g=s900-mo-c-c0xffffffff-rj-k-no"width="200">
+          <img class="img img-fluid m-5" src="http://pixel.nymag.com/imgs/daily/vulture/2013/11/04/04-hbo-logo.w190.h190.2x.jpg" width='200'>
+        </div>
+      </div>
+      <div class="row">
+        
+        <div class="col-3">
+          
+        </div>
+      </div>
+  
+  </div>
+  </section>
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <h4 class="mt-5 mx-5">casting</h4>
+      <p class="mx-5">Game of Thrones has an ensemble cast estimated to be the largest on television
+         during its third season, 257 cast names were recorded.
+         In 2014, several actor contracts were renegotiated to include a seventh-season 
+         option, with raises which reportedly made them among the highest-paid performers on cable TV.
+          In 2016, several actor contracts were again renegotiated, reportedly increasing the salary of five
+           of the main cast members to £2 million per episode for the last two seasons, which would make them 
+           the highest paid actors on television.
+         The main cast is listed below.</p>
+      <div class="carousel m-5">
+          <div class="owl-carousel owl-theme">
+              <div *ngFor="let prop of properties ">
+                <div class="item">
+                <h6 class="text-center text-white" >{{prop.name}}</h6>
+                 <h6 class="text-center text-muted"> Artist </h6>
+                <img src={{prop.url}} height="150" width="200">
+                 <h6 class="text-center effect">{{prop.characterName}} </h6>
+                 </div>
+              </div>
+                </div>
+
+      </div>
+    </div>
+  </div>
+</div>

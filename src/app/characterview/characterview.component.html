@@ -1,0 +1,86 @@
+<div class="container-fluid ">
+    <div class="row">
+      <div class="col">
+        <div *ngIf="singlecharacter">
+          <div class="over">
+            <div class="container">
+              <div class="row heightof align-items-center">
+                <div class="col-md-6">
+                  <img class="img img-fluid" width="400" src="http://screencrush.com/files/2015/04/got-630x420.jpg?w=980&q=75">
+                </div>
+                <div class="col-md-6">
+                   <div class="mbox  text-light">
+                     <div  class="header mb-3">
+                        <h3>{{singlecharacter.name}}</h3>
+                    
+                         <h3>{{singlecharacter.aliases}}</h3>
+                        <div *ngIf="singlecharacter.titles">
+                          <div *ngFor='let x of singlecharacter.title'>
+                            Titles : {{x}}
+                          </div>
+                        </div> 
+                          
+                     </div>
+                     <div class="body"><h5>Gender : {{singlecharacter.gender}}</h5>
+                      <div *ngIf='singlecharacter.culture'> <h5>Culture : {{singlecharacter.culture}} </h5> </div>
+                      
+                     <div *ngIf='singlecharacter.born'> <h5 >Born : {{singlecharacter.born}}</h5> </div>
+                     <div *ngIf='singlecharacter.died'> <h5 >died : {{singlecharacter.died}}</h5> </div>
+                     <div *ngIf='singlecharacter.father'> <h5 >father : {{singlecharacter.father}}</h5> </div>
+                     <div *ngIf='singlecharacter.mother'> <h5 >Born : {{singlecharacter.mother}}</h5> </div>
+                     <div *ngIf='singlecharacter.spouce'> <h5 >Born : {{singlecharacter.spouse}}</h5> </div>
+                       <h5></h5>
+                       <h5>  </h5>
+                       <button class="btn btn-danger m-3" (click)='getrelatedbooks(singlecharacter.books)' >books related</button>
+                    </div>
+                   </div>
+                      
+                </div>
+              </div>
+              <!--end of row-->
+              <!--start of character row-->
+             
+              <div *ngIf='booksall.length>0'>
+                  <div class="row text-center text-light m-3">
+                      <div class="col">
+                        <h5 class='text-uppercase'>BOOKS RELATED TO {{singlecharacter.name}}</h5>
+                      </div>
+                    </div>
+              <div class="row">
+                
+                <div *ngFor="let t of booksall" class="col-md-4 my-2" >
+                  <div>
+                  <div class="box p-3 text-light">
+                    <div class="heading">Name : {{t.name}} </div>
+                     <div>Author : {{t.authors}} </div>
+                    
+                    <div class="boxbody">
+                     <div> Country: {{t.country}}</div>
+                    <div> pages :{{t.numberOfPages}} </div>
+                     <div> released : {{t.released | date}} </div>
+                     <div> mediaType : {{t.mediaType}} </div>
+                   
+                    </div>
+                  </div>
+                  </div>
+                  
+                    
+                      
+                  
+                  </div>
+                  
+                  </div>
+               
+                  
+                
+              </div>
+              <!--end of character -->  
+            </div>
+          </div>
+      </div>
+      </div>
+    
+    
+    </div>
+  </div>
+  

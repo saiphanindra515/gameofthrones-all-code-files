@@ -1,0 +1,68 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col">
+        <div class="over">
+          <div class="container">
+            <div class="row heightof align-items-center">
+              <div class="col-md-6">
+                <img class="img img-fluid" width="400" src="http://gobuyzone.com/gameofthronesgifts/wp-content/uploads/sites/4/2016/11/GOTbookFront.jpg">
+              </div>
+              <div class="col-md-6">
+                 <div class="mbox  text-light">
+                   <div class="header mb-3">
+                     <h3>{{bookinfo.name}}</h3>
+                        
+                   </div>
+                   <div class="body"><h5 *ngFor='let x of bookinfo.authors'>Author : {{x}}</h5>
+                     <h5>country: {{bookinfo.country}}</h5>
+                     <h5>numberOfpages : {{bookinfo.numberOfPages}}</h5>
+                     <h5>publisher : {{bookinfo.publisher}}</h5>
+                     <h5> released : {{bookinfo.released | date}} </h5>
+                     <button class="btn btn-danger m-3" (click)="getcharacter(bookinfo.characters)">get all characters</button>
+                  </div>
+                 </div>
+                    
+              </div>
+            </div>
+            <!--end of row-->
+            <!--start of character row-->
+           
+            <div *ngIf='total.length>0'>
+                <div class="row text-center text-light m-3">
+                    <div class="col">
+                      <h5 class='text-uppercase'>CHARACTERS RELATED TO {{bookinfo.name}}</h5>
+                    </div>
+                  </div>
+            <div class="row">
+              
+              <div *ngFor="let t of total" class="col-md-4 my-2" >
+                <div>
+                <div class="box p-3 text-light">
+                  <div class="heading">Name : {{t.name}}
+                   <div>Aliase : {{t.aliases[0]}} </div>
+                  </div>
+                  <div class="boxbody">
+                   <div> Born in: {{t.born}}</div>
+                  <div> Culture :{{t.culture}} </div>
+                   <div> Gender : {{t.gender}} </div>
+                 
+                  </div>
+                </div>
+                </div>
+                
+                  
+                    
+                
+                </div>
+                
+                </div>
+             
+                
+              
+            </div>
+            <!--end of character -->
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

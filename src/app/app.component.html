@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#"><img class="img img-fluid" width="100"src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d8/Game_of_Thrones_title_card.jpg/250px-Game_of_Thrones_title_card.jpg"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-0 ml-lg-auto">
+        <li class="nav-item">
+          <a class="nav-link mx-2"[routerLink]="['/home']">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" [routerLink]="['/allitems']">information</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Disabled</a>
+        </li>
+        <li class="nav-item">
+            <a class="btn btn-danger mx-2" href="#">Signin</a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+  </div>
+  </div>
+  </div>
+ 
+  <router-outlet> </router-outlet>

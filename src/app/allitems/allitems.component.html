@@ -1,0 +1,74 @@
+<div class="container mt-5">
+    <div class="row my-4">
+        <div class="col">
+            <h6 class="text-center text-capitalize">information related to books,houses,characters of GOT</h6>
+        </div>
+    </div>
+    <div *ngIf='alporder.length>0'>
+    <div *ngFor='let x of alporder'>
+  <div class="row">
+     
+         
+       <div *ngFor="let y of x | orderBy :'name'" class="col-md-4 mb-2" >
+        <div *ngIf="y.isbn">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    
+                  <h5 class="card-title text-primary">{{y.name}}</h5>
+                  <div *ngFor='let a of y.authors'>Authors: {{a}}</div>
+                  <p> country :{{y.country}}</p>
+                  <p>Media: {{y.media}}</p>
+                  <p>type: Book information</p>
+
+                  <p class="card-text">{{y.url}}</p>
+                  <a href="#" class="btn btn-primary" [routerLink]="['/book', y.url.substr(44)]">View details</a>
+                </div>
+              </div>
+              
+         </div> 
+         <div *ngIf="y.region">
+                <div class="card houses" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title text-secondary">{{y.name}}</h5>
+                      <p>{{y.region}}</p>
+                      <p class="card-text">{{y.url}}</p>
+                      <p>type: House information</p>
+                      <a href="#" class="btn btn-secondary"[routerLink]="['/house',y.url.substr(45)]">View details </a>
+                    </div>
+                  </div>
+                  
+             </div> 
+
+             <div *ngIf="y.gender">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body">
+                         <div *ngIf="y.name;then found else notfound"></div>
+                         <ng-template #notfound> <h5 class="card-title text-danger"></h5> </ng-template>
+                         <ng-template #found> <h5 class="card-title text-danger"> {{y.name}}</h5> </ng-template>
+                          <h5>Alias : {{y.aliases[0]}}</h5>
+                          <p>gender : {{y.gender}}</p>
+                          <p>culture : {{y.culture}}</p>
+                          <p>type: character information</p>
+                          <p class="card-text">{{y.url}}</p>
+                          <a href="#" class="btn btn-danger"[routerLink]="['/character',y.url.substr(49)]">View details</a>
+                        </div>
+                      </div>
+                      
+                 </div> 
+        
+    
+
+         
+
+
+      </div>
+      <!--end of ngfor internal-->
+      </div>
+      
+      
+   </div> 
+
+   </div>
+  
+</div>
+<router-outlet></router-outlet>

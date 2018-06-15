@@ -1,0 +1,19 @@
+.over{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url('https://images.vexels.com/media/users/3/78080/raw/f02f5be3428b70b121a86d7c67662e1d-game-of-thrones-houses.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+     height:auto;
+}
+.heightof{
+    height:100vh;
+}
+.box{
+    border:1px solid lightgrey;
+    width:300px;
+    height:auto;
+    
+}
+
+

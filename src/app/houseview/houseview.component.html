@@ -1,0 +1,117 @@
+<div class="container-fluid ">
+  <div class="row">
+    <div class="col">
+    <div *ngIf='houseinfo'>
+        <div class="over">
+          <div class="container">
+            <div class="row heightof align-items-center">
+              <div class="col-md-6">
+                <img class="img img-fluid" width="400" src="http://cdn.playbuzz.com/cdn/30021037-fba5-48e2-882d-a1aa8556e630/b2a94ef3-b833-4d32-9d3d-9044d956e2d5.jpg">
+              </div>
+              <div class="col-md-6">
+                 <div class="mbox  text-light">
+                   <div  class="header mb-3">
+                      <h3>{{houseinfo.name}}</h3>
+                  
+                       
+                      
+                       
+                       
+                        
+                   </div>
+                   <div class="body"><h5></h5>
+                    <h5>Region : {{houseinfo.region}}</h5>
+                    <div *ngIf='houseinfo.words'> <h5>Words : {{houseinfo.words}} </h5></div>
+                    
+                   <div *ngIf='houseinfo.coatOfArms'> <h5>CoatsofArms : {{houseinfo.coatOfArms}} </h5> </div>
+                   <div *ngIf='houseinfo.seats'> <h5 >{{houseinfo.seats}} </h5> </div>
+                   <div *ngIf='houseinfo.founder'> <h5 >Founder : {{houseinfo.founder}}</h5> </div>
+                   <div *ngIf='houseinfo.titles.length >1'> <h5 >Titles: </h5> </div>
+                   <div *ngIf=''> <h5 ></h5> </div>
+                     <h5></h5>
+                     <h5>  </h5>
+                     
+                     
+                     <button class="btn btn-danger m-3" (click)='getoverlord(houseinfo.overlord)' >Getoverlord</button>
+                     <button class="btn btn-danger" (click)='getswa(houseinfo.swornMembers)'>swornmembers</button>
+                  
+                    </div>
+                 </div>
+                    
+              </div>
+            </div>
+            <!--end of row-->
+            <!--start of character row-->
+           
+            <div *ngIf='swor.length>0'>
+              <div class="row text-center text-light m-3">
+                <div class="col">
+                  <h5 class='text-uppercase'>SWORNMEMBERS OF {{houseinfo.name}}</h5>
+                </div>
+              </div>
+            <div class="row">
+              
+              <div *ngFor="let t of swor" class="col-md-4 my-2" >
+                <div>
+                <div class="box p-3 text-light">
+                  <div class="heading">Name : {{t.name}} </div>
+                   <div *ngIf="t.born"> {{t.born}} </div>
+                  
+                  <div class="boxbody">
+                   <div> Gender : {{t.gender}}</div>
+                  <div>  Culture : {{t.culture}} </div>
+                   <div *ngIf="t.titles"> Titles : {{t.titles}} </div>
+                   
+                 
+                  </div>
+                </div>
+                </div>
+                
+                  
+                    
+                
+                </div>
+                
+                </div>
+             
+                
+              
+            </div>
+            <!--end of character --> 
+            <!-- new row-->
+            <div class="row" *ngIf='overlord'>
+              <div class="col-12">
+                <div class="text-center text-light m-3">
+                 <h5 class='text-uppercase'> OVERLORD of {{houseinfo.name}} </h5>
+                </div>
+                
+              </div>
+              <div class="col text-center">
+                <div class="box p-3 text-light m-3">
+                  <div class="heading">Name : {{overlord.name}} </div>
+                   <div *ngIf="overlord.region"> region : {{overlord.region}} </div>
+                  
+                  <div class="boxbody">
+                   <div> coat of arm : {{overlord.coatOfArms}}</div>
+                  <div>  seats : {{overlord.seats}} </div>
+                   <div *ngIf="overlord.titles.length>0"> 
+                     Titles
+                      <div *ngFor='let x of overlord.titles' > 
+                    {{x}} </div>
+                   </div>
+                 
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!--end of new row--> 
+          </div>
+        </div>
+       </div>
+    </div>
+  
+  
+  </div>
+</div>
+
